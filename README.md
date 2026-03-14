@@ -1,6 +1,6 @@
 # Hytale-MMO-Modded
 
-Modded Hytale MMO server. 47 mods covering RPG leveling, classes, pets, mounts, dungeons, quests, masks, cosmetics, and more.
+Modded Hytale MMO server. 48 mods covering RPG leveling, classes, pets, mounts, dungeons, quests, masks, cosmetics, and more.
 
 ## Mod List
 
@@ -10,14 +10,15 @@ Modded Hytale MMO server. 47 mods covering RPG leveling, classes, pets, mounts, 
 | AdminUI | Server administration GUI | [CurseForge](https://www.curseforge.com/hytale/mods/adminui) |
 | BetterMap | World map with cave mode and waypoints | [CurseForge](https://www.curseforge.com/hytale/mods/bettermap) |
 | Better Shop/AuctionHouse | Shop and auction house with configurable economy | [CurseForge](https://www.curseforge.com/hytale/mods/better-shop-auctionhouse) |
-| ExtendedTeleportHistory | Extended teleport history tracking | *Link unavailable* |
+| Extended Teleporters | Removes teleporter limit, adds private/restricted/trust teleporters | [CurseForge](https://www.curseforge.com/hytale/mods/no-teleporters-limit) |
 | EyeSpy | HUD that displays info about what you're looking at | [CurseForge](https://www.curseforge.com/hytale/mods/eyespy) |
 | GhostBlockRemover | Detects and removes ghost blocks from removed mods | [CurseForge](https://www.curseforge.com/hytale/mods/ghostblockremover) |
 | Gravestones | Keep items safe on death with gravestones | [CurseForge](https://www.curseforge.com/hytale/mods/gravestones) |
 | Loot4Everyone | Individual loot chests for every player | [CurseForge](https://www.curseforge.com/hytale/mods/loot4everyone) |
 | Mounts+ | Rideable mounts with storage and eggs | [CurseForge](https://www.curseforge.com/hytale/mods/mountsplus) |
+| MultipleHUD | Allows multiple HUD elements on screen (required by KyuubiSoft Quest System) | [CurseForge](https://www.curseforge.com/hytale/mods/multiplehud) |
 | Pets+ | Pet system with XP, leveling, and combat | [CurseForge](https://www.curseforge.com/hytale/mods/petsplus) |
-| QuestBook | Quest system with crafting, kill, and location tasks | [CurseForge](https://www.curseforge.com/hytale/mods/questbook) |
+| KyuubiSoft Quest System | Quest framework with daily/weekly rotations, story chapters, NPC quest givers, token shop | [CurseForge](https://www.curseforge.com/hytale/mods/kyuubisoft-quest-system-story-daily-weekly-quest) |
 | ReviveMe | Downed and revival system for multiplayer | [CurseForge](https://www.curseforge.com/hytale/mods/reviveme) |
 | RPG Leveling And Stats | Leveling system with XP, stats, and classes | [CurseForge](https://www.curseforge.com/hytale/mods/rpg-leveling-and-stats) |
 | KyuubiSoft Core | Core library for KyuubiSoft mods (NPCs, NPC Shops, and more) | [CurseForge](https://www.curseforge.com/hytale/mods/kyuubisoft-core) |
@@ -81,6 +82,19 @@ Only mods that add commands are listed here.
 | `/admin w` | Warps management | `AdminUI.warp.open` |
 | `/admin st` | Live server stats | `AdminUI.stats.open` |
 | `/admin bk` | Backup management | `AdminUI.backup.open` |
+
+### Better Shop/AuctionHouse
+| Command | Description | Permission |
+|---------|-------------|------------|
+| `/shop` | Open the shop UI (aliases: `/store`, `/bettershop`) | `bettershopauction.command.shop` |
+| `/auction` | Open the auction house UI (aliases: `/ah`, `/betterauction`) | `bettershopauction.command.auction` |
+| `/economyprovider` | List available economy providers | `bettershopauction.command.economy.provider` |
+| `/shop open <player>` | Open shop UI for a specific player (NPC integration) | `bettershopauction.command.shop.admin` |
+| `/shop open <player> <shopid>` | Open a specific shop category for a player | `bettershopauction.command.shop.admin` |
+| `/shop admin` | Open the admin shop editor | `bettershopauction.command.shop.admin` |
+| `/shop reload` | Reload config (also: `/auction reload`) | `bettershopauction.command.shop.admin` |
+| `/auction open <player>` | Open auction UI for a specific player | `bettershopauction.command.auction.admin` |
+| `/auction admin` | Open the auction admin panel | `bettershopauction.command.auction.admin` |
 
 ### BetterMap
 | Command | Description | Permission |
@@ -162,15 +176,17 @@ Only mods that add commands are listed here.
 | `/pets admin` | Open admin pet management UI | `pets.admin` |
 | `/pets create` | Open create/edit pet types UI | `pets.admin` |
 
-### QuestBook
+### KyuubiSoft Quest System
 | Command | Description | Permission |
 |---------|-------------|------------|
-| `/quest book` | Open the quest book UI | None |
-| `/quest track <id>` | Track a specific quest | None |
-| `/quest untrack` | Stop tracking current quest | None |
-| `/quest progress` | View your overall progress | None |
-| `/quest location` | Show your current zone/biome | None |
-| `/questadmin reload` | Reload quest files | OP |
+| `/ksquest` | Open the quest book UI (aliases: `/questbook`, `/qb`) | None |
+| `/ksquestsettings` | Open personal quest settings (HUD, notifications) | None |
+| `/ksquestadmin panel` | Open the admin quest management panel | `questbook.admin` |
+| `/ksquestadmin reload` | Reload all quest config files | `questbook.admin` |
+| `/ksquestadmin complete <player> <quest_id>` | Force-complete a quest for a player | `questbook.admin` |
+| `/ksquestadmin tokens <player> <add/remove/set> <amount>` | Manage a player's quest tokens | `questbook.admin` |
+| `/ksquestadmin debugmode` | Toggle debug mode for quest diagnostics | `questbook.admin` |
+| `/ksquestadmin resetme` | Reset all your own quest progress | `questbook.admin` |
 
 ### ReviveMe
 | Command | Description | Permission |
@@ -485,7 +501,7 @@ Custom drop tables in `configs/loot_tables/` add modded weapons, pet eggs, and T
 
 ## Class Intro Quests
 
-8 class quests in `configs/kyuubisoft_QuestBook/custom_story_quests.json`. Unlock after completing the tutorial. Each one gives a starter weapon for that class.
+8 class quests in `configs/KyuubiSoft-Quests/story_quests.json`. Unlock after completing the tutorial. Each one gives a starter weapon for that class.
 
 | Quest | Class | Kill Objectives | Reward Weapon |
 |-------|-------|-----------------|---------------|
@@ -552,7 +568,12 @@ The 13 Traveling Mounts (craftable at the Farmingbench) are also available as lo
 Permissions are managed through Hytale's built-in `permissions.json` file at `/server/permissions.json`. No third party permissions mod is needed.
 
 ### Default Configuration
-The OP group grants `*` (all permissions). The Adventure group grants SimpleClaims permissions to all players so they can claim chunks and use parties without OP.
+The OP group grants `*` (all permissions). Hytale places all players in the **Adventure** group by default. The Adventure group grants SimpleClaims and Better Shop/AuctionHouse permissions so players can claim chunks, use parties, and access the shop without OP.
+
+### Better Shop/AuctionHouse Permissions
+The Adventure group includes shop and auction permissions so all players can browse the shop and auction house:
+- `bettershopauction.command.shop` — Open the shop UI
+- `bettershopauction.command.auction` — Open the auction house UI
 
 ### SimpleClaims Permissions
 The Adventure group in permissions.json includes all SimpleClaims permissions so regular players can create parties, invite friends, accept invites, and claim chunks. The key permissions are:
@@ -566,7 +587,7 @@ The Adventure group in permissions.json includes all SimpleClaims permissions so
 - `simpleclaims.party-leave` — Leave your current party
 - `simpleclaims.party.claim_chunk_amount.20` — Base chunk limit per party
 
-To add a player to the Adventure group, use the Hytale `/perm` command or add them in permissions.json directly.
+Players are automatically placed in the Adventure group when they join. To manage groups manually, use the Hytale `/perm` command or edit permissions.json directly.
 
 ---
 
