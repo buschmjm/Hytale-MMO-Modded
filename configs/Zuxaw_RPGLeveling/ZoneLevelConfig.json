@@ -1,0 +1,35 @@
+{
+  "Version": "0.2.0",
+  "Zones": [
+    {
+      "Id": 1,
+      "LevelMin": 1,
+      "LevelMax": 15,
+      "ZoneRateExp": 1.0,
+      "MissingBiomeIds": []
+    },
+    {
+      "Id": 2,
+      "LevelMin": 15,
+      "LevelMax": 30,
+      "ZoneRateExp": 1.0,
+      "MissingBiomeIds": []
+    },
+    {
+      "Id": 3,
+      "LevelMin": 15,
+      "LevelMax": 30,
+      "ZoneRateExp": 1.0,
+      "MissingBiomeIds": []
+    },
+    {
+      "Id": 4,
+      "LevelMin": 30,
+      "LevelMax": 50,
+      "ZoneRateExp": 1.0,
+      "MissingBiomeIds": []
+    }
+  ],
+  "EntityOverrides": [],
+  "_comment": "Zone 1: Emerald Grove (1-15), Zone 2: Howling Sands (15-30), Zone 3: Whisperfrost Frontiers/Borea (15-30), Zone 4: Devastated Lands (30-50). Ocean biomes should be remapped to Zone 2 or 3 via MissingBiomeIds once biome IDs are known."
+}

@@ -1,0 +1,72 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Prey Masks (T1)",
+      "permission": "",
+      "IconId": "HayHay_Head_Cow_Mask"
+    },
+    {
+      "id": 2,
+      "name": "Predator Masks (T2)",
+      "permission": "",
+      "IconId": "HayHay_Head_Fox_Mask"
+    },
+    {
+      "id": 3,
+      "name": "Farming",
+      "permission": "",
+      "IconId": ""
+    },
+    {
+      "id": 4,
+      "name": "Blocks",
+      "permission": "",
+      "IconId": ""
+    },
+    {
+      "id": 5,
+      "name": "Ores & Misc",
+      "permission": "",
+      "IconId": ""
+    }
+  ],
+  "items": [
+    { "id": 1, "categoryId": 1, "itemId": "HayHay_Head_Cow_Mask", "buyPrice": 2000.0, "sellPrice": 200.0, "isCommand": false, "command": "" },
+    { "id": 2, "categoryId": 1, "itemId": "HayHay_Head_Pig_Pink_Mask", "buyPrice": 2000.0, "sellPrice": 200.0, "isCommand": false, "command": "" },
+    { "id": 3, "categoryId": 1, "itemId": "HayHay_Head_Pig_Wild_Mask", "buyPrice": 2000.0, "sellPrice": 200.0, "isCommand": false, "command": "" },
+    { "id": 4, "categoryId": 1, "itemId": "HayHay_Head_Warthog_Mask", "buyPrice": 2000.0, "sellPrice": 200.0, "isCommand": false, "command": "" },
+    { "id": 5, "categoryId": 1, "itemId": "HayHay_Head_Ram_Mask", "buyPrice": 2500.0, "sellPrice": 250.0, "isCommand": false, "command": "" },
+    { "id": 6, "categoryId": 1, "itemId": "HayHay_Head_Mosshorn_Mask", "buyPrice": 3000.0, "sellPrice": 300.0, "isCommand": false, "command": "" },
+    { "id": 7, "categoryId": 1, "itemId": "HayHay_Head_Mosshorn2_Mask", "buyPrice": 3000.0, "sellPrice": 300.0, "isCommand": false, "command": "" },
+
+    { "id": 20, "categoryId": 2, "itemId": "HayHay_Head_Fox_Mask", "buyPrice": 4000.0, "sellPrice": 400.0, "isCommand": false, "command": "" },
+    { "id": 21, "categoryId": 2, "itemId": "HayHay_Head_Cat_Mask", "buyPrice": 4000.0, "sellPrice": 400.0, "isCommand": false, "command": "" },
+    { "id": 22, "categoryId": 2, "itemId": "HayHay_Head_Bear_Mask", "buyPrice": 5000.0, "sellPrice": 500.0, "isCommand": false, "command": "" },
+    { "id": 23, "categoryId": 2, "itemId": "HayHay_Head_Polar_Bear_Mask", "buyPrice": 5000.0, "sellPrice": 500.0, "isCommand": false, "command": "" },
+    { "id": 24, "categoryId": 2, "itemId": "HayHay_Head_Black_Wolf_Mask", "buyPrice": 4500.0, "sellPrice": 450.0, "isCommand": false, "command": "" },
+    { "id": 25, "categoryId": 2, "itemId": "HayHay_Head_Grey_Wolf_Mask", "buyPrice": 4500.0, "sellPrice": 450.0, "isCommand": false, "command": "" },
+    { "id": 26, "categoryId": 2, "itemId": "HayHay_Head_White_Wolf_Mask", "buyPrice": 5000.0, "sellPrice": 500.0, "isCommand": false, "command": "" },
+    { "id": 27, "categoryId": 2, "itemId": "HayHay_Head_Feran_Mask", "buyPrice": 5000.0, "sellPrice": 500.0, "isCommand": false, "command": "" },
+    { "id": 28, "categoryId": 2, "itemId": "HayHay_Head_Sabertooth_Tiger_Mask", "buyPrice": 7500.0, "sellPrice": 750.0, "isCommand": false, "command": "" },
+    { "id": 29, "categoryId": 2, "itemId": "HayHay_Head_Sabertooth_Tiger_Snow_Mask", "buyPrice": 7500.0, "sellPrice": 750.0, "isCommand": false, "command": "" },
+    { "id": 30, "categoryId": 2, "itemId": "HayHay_Head_Sabertooth_Tiger_Snow2_Mask", "buyPrice": 7500.0, "sellPrice": 750.0, "isCommand": false, "command": "" },
+
+    { "id": 100, "categoryId": 3, "itemId": "Plant_Crop_Wheat_Item", "buyPrice": 50.0, "sellPrice": 1.0, "isCommand": false, "command": "" },
+    { "id": 101, "categoryId": 3, "itemId": "Plant_Crop_Carrot_Item", "buyPrice": 100.0, "sellPrice": 2.0, "isCommand": false, "command": "" },
+    { "id": 102, "categoryId": 3, "itemId": "Plant_Crop_Potato_Item", "buyPrice": 100.0, "sellPrice": 2.0, "isCommand": false, "command": "" },
+    { "id": 103, "categoryId": 3, "itemId": "Plant_Crop_Corn_Item", "buyPrice": 100.0, "sellPrice": 2.0, "isCommand": false, "command": "" },
+    { "id": 104, "categoryId": 3, "itemId": "Plant_Crop_Tomato_Item", "buyPrice": 200.0, "sellPrice": 3.0, "isCommand": false, "command": "" },
+
+    { "id": 200, "categoryId": 4, "itemId": "Block_Stone", "buyPrice": 5.0, "sellPrice": 1.0, "isCommand": false, "command": "" },
+    { "id": 201, "categoryId": 4, "itemId": "Block_Wood_Oak_Log", "buyPrice": 10.0, "sellPrice": 2.0, "isCommand": false, "command": "" },
+
+    { "id": 300, "categoryId": 5, "itemId": "Ore_Copper", "buyPrice": 50.0, "sellPrice": 5.0, "isCommand": false, "command": "" },
+    { "id": 301, "categoryId": 5, "itemId": "Ore_Iron", "buyPrice": 100.0, "sellPrice": 10.0, "isCommand": false, "command": "" },
+    { "id": 302, "categoryId": 5, "itemId": "Ore_Cobalt", "buyPrice": 200.0, "sellPrice": 20.0, "isCommand": false, "command": "" },
+    { "id": 303, "categoryId": 5, "itemId": "Ore_Silver", "buyPrice": 500.0, "sellPrice": 50.0, "isCommand": false, "command": "" },
+    { "id": 304, "categoryId": 5, "itemId": "Ore_Gold", "buyPrice": 750.0, "sellPrice": 75.0, "isCommand": false, "command": "" },
+    { "id": 305, "categoryId": 5, "itemId": "Tool_Repair_Kit_Iron", "buyPrice": 300.0, "sellPrice": 30.0, "isCommand": false, "command": "" }
+  ],
+  "_comment": "T1 Prey masks (Rare, 2000-3000g) and T2 Predator masks (Epic, 4000-7500g) sold in shop + available as quest rewards. T3 Kweebec masks and T4 Undead/Monster masks are NOT sold — rare mob drops only. Capes are player-crafted. Mounts and pets via auction house."
+}

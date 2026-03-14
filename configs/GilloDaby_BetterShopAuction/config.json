@@ -1,0 +1,22 @@
+{
+  "shopEnabled": true,
+  "auctionEnabled": true,
+  "shop": {
+    "enabled": true
+  },
+  "auction": {
+    "enabled": true,
+    "expirationMinutes": 0,
+    "listingFee": 0.0,
+    "minPrice": 1.0,
+    "maxListingsPerPlayer": 50,
+    "maxUiListings": 100,
+    "listingLimitEnabled": false,
+    "listingLimitSeeded": false,
+    "listingLimitByPermission": {},
+    "sellerPayoutBonusSeeded": false,
+    "sellerPayoutBonusByPermission": {}
+  },
+  "economy": {},
+  "_comment": "expirationMinutes: 0 = listings never expire. Players can cancel their own listings manually. listingFee: 0 = no fee to post."
+}

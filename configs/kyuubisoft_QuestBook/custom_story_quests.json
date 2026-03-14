@@ -1,0 +1,364 @@
+{
+  "_info": "MMO Class Introduction Quests. Each class has a quest chain that introduces the player to their chosen weapon type and rewards a starter weapon.",
+  "disabled_base_ids": [],
+  "quests": [
+    {
+      "id": "class_warrior_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "easy",
+      "icon_item": "Weapon_Sword_Crude",
+      "name": {
+        "en": "Path of the Warrior"
+      },
+      "description": {
+        "en": "Prove your strength with a blade. Defeat enemies using swords or longswords to begin your warrior training."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Trork*",
+          "count": 10,
+          "description": {
+            "en": "Defeat Trorks (0/10)"
+          }
+        },
+        {
+          "id": "obj_2",
+          "type": "kills",
+          "target": "Spider*",
+          "count": 5,
+          "description": {
+            "en": "Defeat Spiders (0/5)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "IronSword2",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_berserker_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "easy",
+      "icon_item": "Weapon_Battleaxe_Crude",
+      "name": {
+        "en": "Path of the Berserker"
+      },
+      "description": {
+        "en": "Embrace raw power. Prove you can wield heavy axes by crushing your foes."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Trork*",
+          "count": 15,
+          "description": {
+            "en": "Defeat Trorks (0/15)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "Weapon_Battleaxe_Iron",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_ranger_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "easy",
+      "icon_item": "Weapon_Crossbow_Iron",
+      "name": {
+        "en": "Path of the Ranger"
+      },
+      "description": {
+        "en": "Master ranged combat. Hunt creatures from a distance to prove your marksmanship."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Wolf*",
+          "count": 8,
+          "description": {
+            "en": "Hunt Wolves (0/8)"
+          }
+        },
+        {
+          "id": "obj_2",
+          "type": "kills",
+          "target": "Spider*",
+          "count": 8,
+          "description": {
+            "en": "Hunt Spiders (0/8)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "Weapon_Crossbow_Iron",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_mage_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "easy",
+      "icon_item": "Weapon_Staff_Crude",
+      "name": {
+        "en": "Path of the Mage"
+      },
+      "description": {
+        "en": "Channel arcane energy. Defeat enemies using staves to attune yourself to magical forces."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Skeleton*",
+          "count": 10,
+          "description": {
+            "en": "Defeat Skeletons (0/10)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "MI_Weapon_Wand_Fire",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_spearman_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "easy",
+      "icon_item": "Weapon_Spear_Crude",
+      "name": {
+        "en": "Path of the Spearman"
+      },
+      "description": {
+        "en": "Keep your enemies at bay. Master the reach of the spear to control the battlefield."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Trork*",
+          "count": 10,
+          "description": {
+            "en": "Defeat Trorks with a spear (0/10)"
+          }
+        },
+        {
+          "id": "obj_2",
+          "type": "kills",
+          "target": "Wolf*",
+          "count": 5,
+          "description": {
+            "en": "Defeat Wolves (0/5)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "Weapon_Spear_Iron",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_rogue_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "medium",
+      "icon_item": "WanMine_Ashthorn_Dagger",
+      "name": {
+        "en": "Path of the Rogue"
+      },
+      "description": {
+        "en": "Strike fast and strike true. Prove your cunning by eliminating enemies with daggers."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Trork*",
+          "count": 12,
+          "description": {
+            "en": "Defeat Trorks (0/12)"
+          }
+        },
+        {
+          "id": "obj_2",
+          "type": "kills",
+          "target": "Skeleton*",
+          "count": 5,
+          "description": {
+            "en": "Defeat Skeletons (0/5)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "WanMine_Ashthorn_Dagger",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_crusader_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "medium",
+      "icon_item": "WanMine_Helioram_Mace",
+      "name": {
+        "en": "Path of the Crusader"
+      },
+      "description": {
+        "en": "Wield righteous might. Crush the undead with a heavy mace and prove your divine resolve."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Skeleton*",
+          "count": 15,
+          "description": {
+            "en": "Destroy Skeletons (0/15)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 15
+        },
+        {
+          "type": "item",
+          "item_id": "WanMine_Helioram_Mace",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    },
+    {
+      "id": "class_samurai_intro",
+      "type": "story",
+      "category": "side",
+      "difficulty": "medium",
+      "icon_item": "Sakura_No_Tsurugi",
+      "name": {
+        "en": "Path of the Samurai"
+      },
+      "description": {
+        "en": "Honor the blade. Master the katana through disciplined combat against worthy foes."
+      },
+      "objectives": [
+        {
+          "id": "obj_1",
+          "type": "kills",
+          "target": "Trork*",
+          "count": 10,
+          "description": {
+            "en": "Defeat Trorks (0/10)"
+          }
+        },
+        {
+          "id": "obj_2",
+          "type": "kills",
+          "target": "Wolf*",
+          "count": 8,
+          "description": {
+            "en": "Hunt Wolves (0/8)"
+          }
+        },
+        {
+          "id": "obj_3",
+          "type": "kills",
+          "target": "Spider*",
+          "count": 5,
+          "description": {
+            "en": "Slay Spiders (0/5)"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "type": "quest_tokens",
+          "amount": 20
+        },
+        {
+          "type": "item",
+          "item_id": "Weapon_Sword_Cobalt",
+          "amount": 1
+        }
+      ],
+      "prerequisites": {
+        "quests": ["tutorial_combat"]
+      }
+    }
+  ]
+}

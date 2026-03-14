@@ -1,0 +1,34 @@
+{
+  "Version": "0.3.0",
+  "EnableClasses": true,
+  "TierProgression": [
+    { "From": 0, "To": 1, "LvlMin": 1, "LvlMax": 25, "Kills": 75 },
+    { "From": 1, "To": 2, "LvlMin": 25, "LvlMax": 50, "Kills": 150 },
+    { "From": 2, "To": 3, "LvlMin": 50, "LvlMax": 75, "Kills": 250 },
+    { "From": 3, "To": 4, "LvlMin": 75, "LvlMax": 100, "Kills": 300 }
+  ],
+  "WeaponKinds": [
+    { "IncludedInId": "Battleaxe", "Icon": "Weapon_Battleaxe_Doomed" },
+    { "IncludedInId": "Axe", "Icon": "Weapon_Axe_Adamantite" },
+    { "IncludedInId": "Longsword", "Icon": "Weapon_Longsword_Mithril" },
+    { "IncludedInId": "Sword", "Icon": "Weapon_Sword_Adamantite" },
+    { "IncludedInId": "Spear", "Icon": "Weapon_Spear_Adamantite" },
+    { "IncludedInId": "Staff", "Icon": "Weapon_Staff_Crystal_Flame" },
+    { "IncludedInId": "Crossbow", "Icon": "Weapon_Crossbow_Mithril" },
+
+    {"_comment": "--- Modded Weapon Kinds (from installed mods) ---"},
+
+    { "IncludedInId": "Longbow", "Icon": "Crude_Longbow" },
+    { "IncludedInId": "MI_Weapon_Wand", "Icon": "MI_Weapon_Wand_Fire" },
+    { "IncludedInId": "MI_Weapon_Staff", "Icon": "MI_Weapon_Staff_Fire" },
+    { "IncludedInId": "MI_Weapon_Spellbook", "Icon": "MI_Weapon_Spellbook_Fire" },
+    { "IncludedInId": "MI_Weapon_Rune", "Icon": "MI_Weapon_Rune_Fire" },
+    { "IncludedInId": "MI_Weapon_Scroll", "Icon": "MI_Weapon_Scroll_Emberwulf" },
+    { "IncludedInId": "Dagger", "Icon": "WanMine_Ashthorn_Dagger" },
+    { "IncludedInId": "Mace", "Icon": "WanMine_Mjollnir_Mace" },
+    { "IncludedInId": "Scythe", "Icon": "WanMine_Void_Requiem_Scythe" },
+    { "IncludedInId": "Katana", "Icon": "Sakura_No_Tsurugi" },
+    { "IncludedInId": "Spellblade", "Icon": "Mystical_Spellblade" }
+  ],
+  "_comment": "WeaponKinds uses substring matching (IncludedInId) against weapon item IDs. Modded weapons from Kami's Magical Items use 'MI_Weapon_' prefix. Wan's Wonder Weapons use 'WanMine_' prefix with weapon type suffix. Longbow Collection uses '_Longbow' suffix. More Crossbow Tiers uses 'Weapon_Crossbow_' prefix (already covered by 'Crossbow'). Eftann's Mythic Weapons use descriptive names — Katana and Spellblade are added as new kinds."
+}

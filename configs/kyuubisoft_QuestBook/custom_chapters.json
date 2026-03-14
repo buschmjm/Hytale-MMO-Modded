@@ -1,0 +1,34 @@
+{
+  "_info": "Custom chapters for MMO class introduction quests.",
+  "disabled_base_ids": [],
+  "chapters": [
+    {
+      "id": "chapter_classes",
+      "quests": [
+        "class_warrior_intro",
+        "class_berserker_intro",
+        "class_ranger_intro",
+        "class_mage_intro",
+        "class_spearman_intro",
+        "class_rogue_intro",
+        "class_crusader_intro",
+        "class_samurai_intro"
+      ],
+      "order": 10,
+      "category": "side",
+      "unlockCondition": "tutorial_completed == true",
+      "rewards": [
+        {
+          "type": "currency",
+          "currency": "quest_tokens",
+          "amount": 50
+        },
+        {
+          "type": "title",
+          "title_id": "class_master"
+        }
+      ],
+      "setsFact": "class_intro_completed"
+    }
+  ]
+}

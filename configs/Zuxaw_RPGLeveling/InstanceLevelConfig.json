@@ -1,0 +1,38 @@
+{
+  "Version": "0.2.7",
+  "Instances": [
+    {
+      "Id": "Yungs_HyDungeons_Skeleton_Dungeon",
+      "LevelMin": 50,
+      "LevelMax": 65,
+      "EntityOverrides": [],
+      "DisableRPGLeveling": false,
+      "ExactIdMatch": true
+    },
+    {
+      "Id": "MJ_Instance_D01",
+      "LevelMin": 55,
+      "LevelMax": 70,
+      "EntityOverrides": [],
+      "DisableRPGLeveling": false,
+      "ExactIdMatch": false
+    },
+    {
+      "Id": "MJ_Instance_D02",
+      "LevelMin": 70,
+      "LevelMax": 85,
+      "EntityOverrides": [],
+      "DisableRPGLeveling": false,
+      "ExactIdMatch": false
+    },
+    {
+      "Id": "MJ_Instance_D03",
+      "LevelMin": 85,
+      "LevelMax": 100,
+      "EntityOverrides": [],
+      "DisableRPGLeveling": false,
+      "ExactIdMatch": false
+    }
+  ],
+  "_comment": "Dungeon instances are level 50-100 (post-overworld content). Major Dungeons uses ExactIdMatch: false because the game appends UUIDs to instance names. Adjust LevelMin/LevelMax and add EntityOverrides for bosses once you test in-game."
+}

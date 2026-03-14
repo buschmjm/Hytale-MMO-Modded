@@ -1,0 +1,22 @@
+{
+  "MaxLevel": 100,
+  "RateExp": 1.0,
+  "BaseXP": 1.0,
+  "LevelBaseXP": 150.0,
+  "LevelOffset": 0.0,
+  "EnableHUD": true,
+  "Debug": false,
+  "ResetLevelOnDeath": false,
+  "BlacklistedEntities": "",
+  "BlacklistedEntityRoles": "Citizen_",
+  "EnablePVPXp": false,
+  "DifficultyPreset": "normal",
+  "EnableMonsterLevelScale": true,
+  "EnableGapLevelDefense": true,
+  "EnableGapLevelDamageToPlayer": true,
+  "EnableGapLevelXpReducer": true,
+  "EnableNameplateLevelDisplay": true,
+  "EnablePlayerLevelNameplate": true,
+  "EnableNotification": true,
+  "EnableCurrentZoneHudDisplay": true
+}
