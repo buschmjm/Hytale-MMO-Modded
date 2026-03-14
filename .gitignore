@@ -1,0 +1,58 @@
+# Get current pod name
+sudo k3s kubectl get pods -n hytale | grep hytale-server
+
+# Check the PVC path still exists and see what's in it
+sudo ls "/var/lib/rancher/k3s/storage/pvc-2a0b4ba5-ac88-4e47-a9b9-6f8278d40263_hytale_hytale-server/mods"
+
+
+# Replace mods in pod with Mods folder on desktop.
+        # Get the name of the pod first then past into the command:
+        POD="hytale-server-64fcd48fc-dnpqv"
+        PVC_PATH="/var/lib/rancher/k3s/storage/pvc-2a0b4ba5-ac88-4e47-a9b9-6f8278d40263_hytale_hytale-server/mods"
+        LOCAL_PATH="$HOME/hytale/Mods"
+
+        # Remove files/folders in pod that aren't in local folder
+        for remote_file in $(sudo ls "$PVC_PATH"); do
+        if [ ! -e "$LOCAL_PATH/$remote_file" ]; then
+            echo "Removing $remote_file..."
+            sudo rm -rf "$PVC_PATH/$remote_file"
+        fi
+        done
+
+        # Copy all local files to pod (overwrites existing)
+        for file in "$LOCAL_PATH"/*; do
+        filename=$(basename "$file")
+        echo "Copying $filename..."
+        sudo cp "$file" "$PVC_PATH/$filename"
+        done
+
+        # Restart
+        echo "Restarting server..."
+        sudo k3s kubectl rollout restart deployment/hytale-server -n hytale
+        echo "Done!"
+
+
+# Find the pod name and namespace if needed
+sudo k3s kubectl get pods -A | grep hytale
+
+
+# Restart the server to load new mods
+sudo k3s kubectl rollout restart deployment/hytale-server -n hytale
+
+
+# Check logs after restart
+sudo k3s kubectl logs -n hytale <pod-name> --follow
+
+
+#This command updates the existing version of hytale:
+kubectl rollout restart deployment -n hytale hytale-server
+
+
+# Get current pod name and backup
+POD_NAME=$(kubectl get pod -n hytale -l app.kubernetes.io/name=hytale -o jsonpath='{.items[0].metadata.name}')
+kubectl cp hytale/$POD_NAME:/server/universe ~/hytale-backups/universe-backup-$(date +%Y%m%d-%H%M%S)
+
+
+# Restore (replace the date with your backup)
+POD_NAME=$(kubectl get pod -n hytale -l app.kubernetes.io/name=hytale -o jsonpath='{.items[0].metadata.name}')
+kubectl cp ~/hytale-backups/universe-backup-20260130-141600 hytale/$POD_NAME:/server/universe

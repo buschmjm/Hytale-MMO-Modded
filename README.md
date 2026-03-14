@@ -1,6 +1,6 @@
 # Hytale-MMO-Modded
 
-Modded Hytale MMO server. 48 mods covering RPG leveling, classes, pets, mounts, dungeons, quests, masks, cosmetics, and more.
+Modded Hytale MMO server. 47 mods covering RPG leveling, classes, pets, mounts, dungeons, quests, masks, cosmetics, and more.
 
 ## Mod List
 
@@ -15,12 +15,12 @@ Modded Hytale MMO server. 48 mods covering RPG leveling, classes, pets, mounts, 
 | GhostBlockRemover | Detects and removes ghost blocks from removed mods | [CurseForge](https://www.curseforge.com/hytale/mods/ghostblockremover) |
 | Gravestones | Keep items safe on death with gravestones | [CurseForge](https://www.curseforge.com/hytale/mods/gravestones) |
 | Loot4Everyone | Individual loot chests for every player | [CurseForge](https://www.curseforge.com/hytale/mods/loot4everyone) |
-| LuckPerms | Permissions management plugin | [CurseForge](https://www.curseforge.com/hytale/mods/luckperms) |
 | Mounts+ | Rideable mounts with storage and eggs | [CurseForge](https://www.curseforge.com/hytale/mods/mountsplus) |
 | Pets+ | Pet system with XP, leveling, and combat | [CurseForge](https://www.curseforge.com/hytale/mods/petsplus) |
 | QuestBook | Quest system with crafting, kill, and location tasks | [CurseForge](https://www.curseforge.com/hytale/mods/questbook) |
 | ReviveMe | Downed and revival system for multiplayer | [CurseForge](https://www.curseforge.com/hytale/mods/reviveme) |
 | RPG Leveling And Stats | Leveling system with XP, stats, and classes | [CurseForge](https://www.curseforge.com/hytale/mods/rpg-leveling-and-stats) |
+| KyuubiSoft Core | Core library for KyuubiSoft mods (NPCs, NPC Shops, and more) | [CurseForge](https://www.curseforge.com/hytale/mods/kyuubisoft-core) |
 | Simple Claims | Chunk claiming and protection system | [CurseForge](https://www.curseforge.com/hytale/mods/simple-claims) |
 
 ### Cosmetics and Wardrobe
@@ -29,9 +29,7 @@ Modded Hytale MMO server. 48 mods covering RPG leveling, classes, pets, mounts, 
 | HayHay's Animal Masks | Animal masks (crafting removed, see Mask System below) | [CurseForge](https://www.curseforge.com/hytale/mods/hayhays-animal-masks) |
 | HayHay's Mob Cosmetics | Mob-themed cosmetics for the Wardrobe API | [CurseForge](https://www.curseforge.com/hytale/mods/hayhays-mob-cosmetics) |
 | HayHay's Plague Doctor Cosmetic | Plague Doctor cosmetic set for Wardrobe API | [CurseForge](https://www.curseforge.com/hytale/mods/hayhays-plague-doctor-cosmetic) |
-| HayHay's Wraith Cosmetic | Wraith outfit cosmetic for Lalyan Cosmetic Core | [CurseForge](https://www.curseforge.com/hytale/mods/hayhays-wraith-cosmetic) |
 | Horns and Antlers: Wardrobe Pack | Horn and antler cosmetics for Wardrobe | [CurseForge](https://www.curseforge.com/hytale/mods/horns-and-antlers-wardrobe-pack) |
-| Lalyan Cosmetic Core | Cosmetic API, lets you equip cosmetics without taking armor slots | [CurseForge](https://www.curseforge.com/hytale/mods/lalyan-cosmetic-core) |
 | MelonicsWardrobes | Wardrobe addon with anime cosmetics | [CurseForge](https://www.curseforge.com/hytale/mods/melonicswardrobes) |
 | Mobstar's Capes | Craftable cosmetic capes | [CurseForge](https://www.curseforge.com/hytale/mods/mobstars-capes) |
 | Violet's Wardrobe | Craftable cosmetic wardrobe items | [CurseForge](https://www.curseforge.com/hytale/mods/violets-wardrobe) |
@@ -128,15 +126,6 @@ Only mods that add commands are listed here.
 | `/gsprotection` | Toggle owner-only gravestone access | — |
 | `/gstimer <min>` | Set auto-break timer (0 = off) | — |
 
-### Lalyan Cosmetic Core
-| Command | Description | Permission |
-|---------|-------------|------------|
-| `/cosmetic change` | Open cosmetic customization UI | None |
-| `/cosmetic apply <CosmeticId> [override]` | Manually apply a cosmetic | OP |
-| `/cosmetic list` | List all loaded cosmetic IDs | OP |
-| `/cosmetic reload` | Reload all cosmetics | OP |
-| `/cosmetic clear` | Remove all cosmetics and reset default skin | OP |
-
 ### Loot4Everyone
 | Command | Description | Permission |
 |---------|-------------|------------|
@@ -199,18 +188,6 @@ Only mods that add commands are listed here.
 | `/lvl addxp <player> <xp>` | Add XP to a player | OP |
 | `/lvl resetstats <player>` | Reset a player's allocated stats | OP |
 | `/lvl resetall` | Reset level and stats for all players | OP |
-
-### LuckPerms
-| Command | Description | Permission |
-|---------|-------------|------------|
-| `/lp` | Main help menu | OP |
-| `/lp user <player> info` | View player's permissions | OP |
-| `/lp user <player> permission set <node> <true/false>` | Set a player's permission | OP |
-| `/lp user <player> parent add <group>` | Add player to a group | OP |
-| `/lp group <group> permission set <node> <true/false>` | Set group permission | OP |
-| `/lp creategroup <name>` | Create a new permission group | OP |
-| `/lp listgroups` | List all groups | OP |
-| `/lp editor` | Open web-based permission editor | OP |
 
 ### Simple Claims
 User Commands:
@@ -542,13 +519,20 @@ Config: `configs/GilloDaby_BetterShopAuction/`
 - 50 listings max per player
 - Players can trade T3/T4 masks, pet eggs, and unique weapons here
 
+### How to Use
+Players open the shop with `/shop` (aliases: `/store`, `/bettershop`). Browse categories, click an item to buy it. The shop pulls currency from whichever economy plugin is detected (Coins, Ecotale, or TheEconomy).
+
+Players open the auction house with `/auction` (aliases: `/ah`, `/betterauction`). From there you can browse other players' listings, create your own listing by selecting an item and setting a price, or buy someone else's listing. Bulk selling is supported in the auction sell editor.
+
+Admin commands: `/shop admin` opens the admin shop editor, `/auction admin` opens the auction admin panel, and `/shop reload` or `/auction reload` hot reloads the config.
+
 ---
 
 ## Mount System
 
 Config: `configs/MountsPlus/config.json`
 
-Four mounts that unlock as players progress through zones. Per mount permissions are on, managed through LuckPerms.
+Four mounts that unlock as players progress through zones. Per mount permissions are on, managed through Hytale's native permissions.json.
 
 | Mount | Rarity | Zone | Speed | Health | Storage | Cooldown | Source |
 |-------|--------|------|-------|--------|---------|----------|--------|
@@ -563,31 +547,26 @@ The 13 Traveling Mounts (craftable at the Farmingbench) are also available as lo
 
 ---
 
-## Permissions (LuckPerms)
+## Permissions (Native Hytale)
 
-Setup guide: `configs/LuckPerms/README_SETUP.md`
+Permissions are managed through Hytale's built-in `permissions.json` file at `/server/permissions.json`. No third party permissions mod is needed.
 
-LuckPerms hooks into Hytale's `PermissionsModule`, so permissions set with `/lp` commands work with all mods including AdminUI and SimpleClaims.
+### Default Configuration
+The OP group grants `*` (all permissions). The Adventure group grants SimpleClaims permissions to all players so they can claim chunks and use parties without OP.
 
-### Default Group (All Players)
-```
-/lp group default permission set simpleclaimsparty.* true
-/lp group default permission set simpleclaimschunk.* true
-/lp group default permission set mounts.wolf_black true
-```
+### SimpleClaims Permissions
+The Adventure group in permissions.json includes all SimpleClaims permissions so regular players can create parties, invite friends, accept invites, and claim chunks. The key permissions are:
+- `simpleclaims.claim-gui` — Opens the chunk claim GUI
+- `simpleclaims.claim` — Claim the chunk you're standing in
+- `simpleclaims.unclaim` — Unclaim the chunk you're standing in
+- `simpleclaims.edit-party` — Open party GUI / toggle party chat
+- `simpleclaims.create-party` — Create a new party
+- `simpleclaims.create-invite` — Invite a player to your party
+- `simpleclaims.accept-invite` — Accept a party invite
+- `simpleclaims.party-leave` — Leave your current party
+- `simpleclaims.party.claim_chunk_amount.20` — Base chunk limit per party
 
-### SimpleClaims Fix
-Regular players couldn't accept group invites because the accept command requires the `simpleclaimsparty.invite-accept` permission. The wildcard grant above fixes this.
-
-### Zone Mount Permissions
-```
-/lp creategroup zone2
-/lp group zone2 permission set mounts.bear_polar true
-/lp creategroup zone3
-/lp group zone3 permission set mounts.rex_cave true
-/lp creategroup zone4
-/lp group zone4 permission set mounts.dragon_frost true
-```
+To add a player to the Adventure group, use the Hytale `/perm` command or add them in permissions.json directly.
 
 ---
 
